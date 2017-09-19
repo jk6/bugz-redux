@@ -1,0 +1,137 @@
+{
+    "apps": [
+        {
+          "id": 1,
+          "name": "Cubebook"
+        },
+        {
+          "id": 2,
+          "name": "Ultimate ToDo List"
+        },
+        {
+          "id": 3,
+          "name": "OnTheGo"
+        },
+        {
+          "id": 4,
+          "name": "BugZ"
+        }              
+      ],
+      "tickets": [
+        {
+          "id": 12345,
+          "appId": 4,
+          "openedBy": "PHB",
+          "date": "20170901",
+          "issue": "Database connection error message",
+          "status": "open"
+        },
+        {
+          "id": 45678,
+          "appId": 1,
+          "openedBy": "PHB",
+          "date": "20170901",
+          "issue": "Sign in issue",
+          "status": "closed"
+        },
+        {
+          "id": 89887,
+          "appId": 3,
+          "openedBy": "PHB",
+          "date": "20170902",
+          "issue": "Connectivity issue",
+          "status": "open"
+        },
+        {
+          "id": 99983,
+          "appId": 1,
+          "openedBy": "PHB",
+          "date": "20170903",
+          "issue": "Application issue",
+          "status": "open"
+        }        
+      ],
+      "comments": [
+        {
+          "id": 9,
+          "ticketId": 45678,
+          "date": "20170918",
+          "user": "batman",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg",
+          "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+          "id": 8,
+          "ticketId": 45678,
+          "date": "20170904",
+          "user": "dilbert",
+          "imgUrl": "http://static.tvtropes.org/pmwiki/pub/images/dilbert17.jpg",
+          "comment": "Issue is resolved. Closing."
+        },
+        {
+          "id": 7,
+          "ticketId": 45678,
+          "date": "20170904",
+          "user": "PHB",
+          "imgUrl": "https://vignette1.wikia.nocookie.net/cartoons/images/1/1e/Phb.png/revision/latest?cb=20070706184119",
+          "comment": "I can sign in now"
+        },
+        {
+          "id": 6,
+          "ticketId": 45678,
+          "date": "20170904",
+          "user": "dilbert",
+          "imgUrl": "http://static.tvtropes.org/pmwiki/pub/images/dilbert17.jpg",
+          "comment": "What happens when you try to sign in?"
+        },
+        {
+          "id": 5,
+          "ticketId": 89887,
+          "date": "20170904",
+          "user": "dilbert",
+          "imgUrl": "http://static.tvtropes.org/pmwiki/pub/images/dilbert17.jpg",
+          "comment": "Issue is resolved. Closing ticket."
+        },
+        {
+          "id": 4,
+          "ticketId": 89887,
+          "date": "20170904",
+          "user": "PHB",
+          "imgUrl": "https://vignette1.wikia.nocookie.net/cartoons/images/1/1e/Phb.png/revision/latest?cb=20070706184119",
+          "comment": "It works!"
+        },
+        {
+          "id": 3,
+          "ticketId": 89887,
+          "date": "20170904",
+          "user": "dilbert",
+          "imgUrl": "http://static.tvtropes.org/pmwiki/pub/images/dilbert17.jpg",
+          "comment": "Ok, I've fixed it; can you try loggin in again?"
+        },
+        {
+          "id": 2,
+          "ticketId": 89887,
+          "date": "20170904",
+          "user": "PHB",
+          "imgUrl": "https://vignette1.wikia.nocookie.net/cartoons/images/1/1e/Phb.png/revision/latest?cb=20070706184119",
+          "comment": "Yes. It's happening sporadically"
+        },
+        {
+          "id": 1,
+          "ticketId": 89887,
+          "date": "20170904",
+          "user": "dilbert",
+          "imgUrl": "http://static.tvtropes.org/pmwiki/pub/images/dilbert17.jpg",
+          "comment": "Is the issue still ocurring?"
+        }              
+      ],
+      "user": [
+        {
+          "id": 1,
+          "name": "batman",
+          "username": "batman1",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg",
+          "devMode": true
+        }
+      ]
+}
