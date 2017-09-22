@@ -5,10 +5,6 @@ import { selectApp } from '../actions/apps';
 import fecha from 'fecha';
 import cuid from 'cuid';
 
-// needed for IE
-//require('jspolyfill-array.prototype.findIndex');
-import { findIndex } from 'jspolyfill-array.prototype.findIndex';
-
 class NewBugForm extends Component {
     constructor (props){
         super (props);

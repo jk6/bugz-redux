@@ -10,6 +10,11 @@ import TicketInfo from './TicketInfo';
 import NewReplyForm from './NewReplyForm';
 import TicketDiscussion from './TicketDiscussion';
 
+
+// needed for IE
+//require('jspolyfill-array.prototype.findIndex');
+import { findIndex } from 'jspolyfill-array.prototype.findIndex';
+
 class TicketDiscussionModal extends Component {
     constructor (props){
         super (props);
