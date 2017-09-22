@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TicketDiscussion = ({ id, imgUrl, user, comment, date }) => {    
+const TicketDiscussion = ({ id, imgUrl, user, comment, date }) => { 
     return (
         <li 
             key={id} 

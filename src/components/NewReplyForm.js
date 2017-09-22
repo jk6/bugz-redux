@@ -21,7 +21,9 @@ class NewReplyForm extends Component {
         return (
             <div>
                 <form>
-                    <h4 className="text-muted">Add a Reply&nbsp;&nbsp;<i className="glyphicon glyphicon-comment"></i></h4>
+                    <h4 className="text-muted">Add a Reply&nbsp;&nbsp;
+                        <i className="glyphicon glyphicon-comment"></i>
+                    </h4>
                     <br />
                     <textarea
                         id="reply"

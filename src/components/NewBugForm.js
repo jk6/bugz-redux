@@ -1,24 +1,59 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createTicket } from '../actions/tickets';
+import { selectApp } from '../actions/apps';
+import fecha from 'fecha';
+import cuid from 'cuid';
+
+// needed for IE
+//require('jspolyfill-array.prototype.findIndex');
+import { findIndex } from 'jspolyfill-array.prototype.findIndex';
 
 class NewBugForm extends Component {
     constructor (props){
         super (props);
 
-        this.sendHandleFormSubmit = this.sendHandleFormSubmit.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
-    
-    sendHandleFormSubmit (e){
+
+    handleChange (e){
         e.preventDefault();
-
-        let newIssue = this.issue.value;        
-
-        this.props.handleFormSubmit(newIssue);
-
+    
+        if (e.target.value != '-1'){      
+          this.props.selectApp(e.target.value, true);
+        }    
+        else {
+          this.props.selectApp('', false);
+        }
+        
         document.getElementById('issue').value = '';
     }
 
+    handleFormSubmit (e){
+        e.preventDefault();        
+
+        let issue = this.issue.value;
+
+        if (issue.trim() != ''){            
+          let newIssue = {        
+            id: cuid(),
+            appId: this.props.app.selected,
+            openedBy: this.props.user.name,
+            date: fecha.format(new Date(), 'YYYY-MM-DD - hh:mm:ss'),
+            issue, 
+            status: 'open'      
+          };
+    
+          this.props.createTicket(newIssue); 
+
+          document.getElementById('issue').value = '';     
+        }
+      }
+
     render (){
-        const { appSelected, handleChange, handleFormSubmit, apps } = this.props;
+        const { apps } = this.props;
+        const { appSelected } = this.props.app;
 
         let appsSelectDisplay = apps.map(app => {
             return <option 
@@ -32,13 +67,15 @@ class NewBugForm extends Component {
         return (
             <div>
                 <form>
-                    <h4 className="text-muted">Submit new bug ticket&nbsp;&nbsp;<i className="glyphicon glyphicon-tag"></i></h4>              
+                    <h4 className="text-muted">Submit new bug ticket&nbsp;&nbsp;
+                        <i className="glyphicon glyphicon-tag"></i>
+                    </h4>              
                     <hr />
                     <div className="row">
                         <div className="col-md-offset-2">
                             <select 
                                 className="form-control"                        
-                                onChange={handleChange}
+                                onChange={this.handleChange}
                             >
                                 <option value='-1'>Select an App</option>
                                 {appsSelectDisplay}
@@ -59,7 +96,7 @@ class NewBugForm extends Component {
                                 className="btn btn-primary"
                                 style={styles.button}
                                 disabled={!appSelected}
-                                onClick={this.sendHandleFormSubmit}
+                                onClick={this.handleFormSubmit}
                             >
                                 Submit
                             </button>
@@ -81,4 +118,19 @@ const styles = {
       }
 };
 
-export default NewBugForm;
+const mapStateToProps = (state) => {
+    return {
+        apps: state.apps,
+        user: state.user,
+        app: state.app
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createTicket: (ticket) => dispatch(createTicket(ticket)),
+        selectApp: (app, bool) => dispatch(selectApp(app, bool))
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewBugForm);
