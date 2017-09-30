@@ -22,8 +22,8 @@ describe ('user reducer', () => {
     });
 
     it('should return correct user state', () => {
-        let initialState = {};
-        let result = user (initialState, action);
+        const initialState = {};
+        const result = user (initialState, action);
         let expectedPropertyLength = Object.keys(action.payload).length;
 
         expect(result).toBe(action.payload); 
