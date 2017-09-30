@@ -1,21 +1,26 @@
 import { user } from '../../reducers/user';
 
-describe('reducers', () => {
+describe ('user reducer', () => {
+    const userObj = {
+        id: 1,
+        name: 'dilbert',
+        username: 'db3',
+        imgUrl: '',
+        devMode: true
+    };
+
     const action = {
         type: 'LOAD_USER',
-        payload: {
-            name: 'dilbert',
-            username: 'db1',
-            devMode: true
-        }
+        payload: userObj
     };
 
     beforeEach(() => {
         return {
+            userObj,
             action
-        };    
+        }
     });
-    
+
     it('should return correct user state', () => {
         let initialState = {};
         let result = user (initialState, action);
@@ -24,6 +29,11 @@ describe('reducers', () => {
         expect(result).toBe(action.payload); 
         expect(result.name).toEqual(action.payload.name);       
         expect(Object.keys(result)).toHaveLength(expectedPropertyLength);
-    });    
-});
+    });
 
+    it ('should return default state when not given an existing action type', () => {
+        const result = user({}, 'SOME_UNKNOWN_TYPE');
+
+        expect(result).toEqual({});
+    });
+});
