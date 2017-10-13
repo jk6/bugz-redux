@@ -1,6 +1,8 @@
+import * as types from './actionTypes';
+
 export function toggleTicketModal (bool){
     return {
-        type: 'TOGGLE_TICKET_MODAL',
+        type: types.TOGGLE_TICKET_MODAL,
         payload: bool
     };
 }

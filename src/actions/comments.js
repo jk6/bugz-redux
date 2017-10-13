@@ -1,8 +1,9 @@
 import axios from 'axios';
+import * as types from './actionTypes';
 
 export function loadComments (comments){
     return {
-        type: 'LOAD_COMMENTS',
+        type: types.LOAD_COMMENTS,
         payload: {
             comments
         }
@@ -11,7 +12,7 @@ export function loadComments (comments){
 
 export function createComment (comment){
     return {
-        type: 'CREATE_COMMENT',
+        type: types.CREATE_COMMENT,
         payload: {
             comment
         }

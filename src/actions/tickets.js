@@ -1,8 +1,9 @@
 import axios from 'axios';
+import * as types from './actionTypes';
 
 export function createTicket (ticket){
     return {
-        type: 'CREATE_TICKET',
+        type: types.CREATE_TICKET,
         payload: {
             ticket
         }
@@ -11,7 +12,7 @@ export function createTicket (ticket){
 
 export function selectTicket (id, appId, app, date, openedBy, issue, status){
     return {
-        type: 'SELECT_TICKET',
+        type: types.SELECT_TICKET,
         payload: {
             ticket: {
                 id,
@@ -28,7 +29,7 @@ export function selectTicket (id, appId, app, date, openedBy, issue, status){
 
 export function toggleTicketStatus (tickets, newStatus, idx){    
     return {
-        type: 'TOGGLE_TICKET_STATUS',
+        type: types.TOGGLE_TICKET_STATUS,
         payload: {
             tickets,
             idx,
@@ -39,7 +40,7 @@ export function toggleTicketStatus (tickets, newStatus, idx){
 
 export function toggleSelectedTicketStatus (ticket, newStatus){
     return {
-        type: 'TOGGLE_SELECTED_TICKET_STATUS',
+        type: types.TOGGLE_SELECTED_TICKET_STATUS,
         payload: {
             ticket,
             newStatus
@@ -49,7 +50,7 @@ export function toggleSelectedTicketStatus (ticket, newStatus){
 
 export function loadTickets (tickets){
     return {
-        type: 'LOAD_TICKETS',
+        type: types.LOAD_TICKETS,
         payload: {
             tickets
         }

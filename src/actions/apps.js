@@ -1,8 +1,9 @@
 import axios from 'axios';
+import * as types from './actionTypes';
 
 export function loadApps (apps){
     return {
-        type: 'LOAD_APPS',
+        type: types.LOAD_APPS,
         payload: {
             apps
         }
@@ -11,7 +12,7 @@ export function loadApps (apps){
 
 export function selectApp (selected, bool){
     return {
-        type: 'SELECT_APP',
+        type: types.SELECT_APP,
         payload: {
             app: {
                 selected,
