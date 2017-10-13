@@ -1,6 +1,8 @@
+import * as types from '../actions/actionTypes';
+
 export function apps (state = [], action){
     switch (action.type){
-        case 'LOAD_APPS':
+        case types.LOAD_APPS:
             return action.payload.apps;
             break;        
         default:
@@ -10,7 +12,7 @@ export function apps (state = [], action){
 
 export function app (state = {}, action){
     switch (action.type){
-        case 'SELECT_APP':
+        case types.SELECT_APP:
             return action.payload.app;
             break;
         default:

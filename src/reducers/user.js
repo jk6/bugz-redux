@@ -1,6 +1,8 @@
+import * as types from '../actions/actionTypes';
+
 export function user (state = {}, action){
     switch (action.type){
-        case 'LOAD_USER':
+        case types.LOAD_USER:
             return action.payload;
             break;
         default:

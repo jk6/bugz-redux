@@ -1,9 +1,11 @@
+import * as types from '../actions/actionTypes';
+
 export function comments (state = [], action){
     switch (action.type){
-        case 'LOAD_COMMENTS':
+        case types.LOAD_COMMENTS:
             return action.payload.comments;
             break;
-        case 'CREATE_COMMENT':
+        case types.CREATE_COMMENT:
             return [
                 action.payload.comment,
                 ...state
