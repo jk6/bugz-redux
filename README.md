@@ -14,7 +14,7 @@ To run Bugz-Redux:
 
 Clone this repo: git clone https://github.com/jk6/bugz-redux.git
 
-cd [directory-you-cloned-into]/bugz-redux
+cd bugz-redux
 
 npm install
 
