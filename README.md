@@ -10,4 +10,4 @@ npm install
 
 npm run dev
 
-navigate to http://localhost:4000
+navigate to http://localhost:3000
