@@ -8,6 +8,6 @@ Clone this repo: git clone https://github.com/jk6/bugz-redux.git
 
 npm install
 
-npm dev
+npm run dev
 
 navigate to http://localhost:4000
