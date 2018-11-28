@@ -4,13 +4,11 @@ export function tickets (state = [], action){
     switch (action.type){
         case types.LOAD_TICKETS:
             return action.payload.tickets;
-            break;
         case types.CREATE_TICKET:
             return [
                 ...state,
                 action.payload.ticket
             ];
-            break;
         case types.TOGGLE_TICKET_STATUS:
             return [
                 ...action.payload.tickets.slice(0, action.payload.idx),                
@@ -19,7 +17,6 @@ export function tickets (state = [], action){
                 }),
                 ...action.payload.tickets.slice(action.payload.idx + 1)
             ];            
-            break;
         default:
             return state;
     }
@@ -29,13 +26,11 @@ export function ticket (state = {}, action){
     switch (action.type){
         case types.SELECT_TICKET:
             return action.payload.ticket;
-            break;
         case types.TOGGLE_SELECTED_TICKET_STATUS:
             return Object.assign({}, 
                 action.payload.ticket, { 
                     status: action.payload.newStatus 
                 });
-            break;
         default:
             return state;
     }
