@@ -6,7 +6,10 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
+    "test:coverage": "jest --coverage",
     "start": "webpack-dev-server",
+    "data": "cd data && json-server db.json --port 3001",
+    "dev": "concurrently --names \"start,data\" \"npm run start --silent\" \"npm run data\"",    
     "build-prod": "webpack --config webpack.config.prod.js -p",
     "log": "git log --pretty=short > git-log.txt"
   },
@@ -20,6 +23,7 @@
     "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "concurrently": "^4.1.0",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
     "img-loader": "^1.3.1",
