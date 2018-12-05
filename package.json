@@ -9,7 +9,7 @@
     "test:coverage": "jest --coverage",
     "start": "webpack-dev-server",
     "data": "cd data && json-server db.json --port 3001",
-    "dev": "concurrently --names \"start,data\" \"npm run start --silent\" \"npm run data\"",    
+    "dev": "concurrently --names \"start,data\" \"npm run start --silent\" \"npm run data\"",
     "build-prod": "webpack --config webpack.config.prod.js -p",
     "log": "git log --pretty=short > git-log.txt"
   },
@@ -42,6 +42,7 @@
     "axios": "^0.15.3",
     "bootstrap": "^3.3.7",
     "cuid": "^1.3.8",
+    "dotenv-webpack": "^1.5.7",
     "fecha": "^2.3.1",
     "jquery": "^3.1.1",
     "react": "^15.3.1",
