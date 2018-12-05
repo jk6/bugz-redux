@@ -6,10 +6,13 @@ To run Bugz-Redux:
 
 Clone this repo: git clone https://github.com/jk6/bugz-redux.git
 
-npm install
+run: npm install
 
-npm run dev
+create a .env file in project root and add the following: 
+
+API_PATH=http://localhost:3001
+
+Then run: npm run dev
 
 navigate to http://localhost:3000
 
-(Included .env file with API_PATH for convenience; you'll want to add .env to your .gitignore)
