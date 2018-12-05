@@ -22,10 +22,12 @@ class App extends Component {
   }
 
   loadData (){ 
-    this.props.loadFetchUser('http://localhost:3001/user');
-    this.props.loadFetchApps('http://localhost:3001/apps');
-    this.props.loadFetchTickets('http://localhost:3001/tickets');
-    this.props.loadFetchComments('http://localhost:3001/comments');
+    const { API_PATH } = process.env;
+
+    this.props.loadFetchUser(`${API_PATH}/user`);
+    this.props.loadFetchApps(`${API_PATH}/apps`);
+    this.props.loadFetchTickets(`${API_PATH}/tickets`);
+    this.props.loadFetchComments(`${API_PATH}/comments`);
   }
 
   componentDidMount (){
