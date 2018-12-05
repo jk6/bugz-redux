@@ -12,4 +12,4 @@ npm run dev
 
 navigate to http://localhost:3000
 
-(Included .env file with API_PATH for convenience; you'll want to add .env file to your .gitignore)
+(Included .env file with API_PATH for convenience; you'll want to add .env to your .gitignore)
