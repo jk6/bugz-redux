@@ -1,5 +1,9 @@
-it ('loads', () => {
-    cy.visit('/');
+describe ('initial load UI', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
 
-    cy.get('h2').contains('BugZ');
+    it ('loads and displays title', () => {
+        cy.get('h2').contains('BugZ');
+    });
 });
