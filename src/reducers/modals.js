@@ -1,10 +1,10 @@
-import * as types from '../actions/actionTypes';
+import * as types from "../actions/actionTypes";
 
-export function showTicketModal (state = false, action){
-    switch (action.type){
-        case types.TOGGLE_TICKET_MODAL:
-            return action.payload;
-        default:
-            return state;
-    }
+export function showTicketModal(state = false, action) {
+  switch (action.type) {
+    case types.TOGGLE_TICKET_MODAL:
+      return action.payload;
+    default:
+      return state;
+  }
 }

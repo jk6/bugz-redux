@@ -1,8 +1,8 @@
-import * as types from './actionTypes';
+import * as types from "./actionTypes";
 
-export function toggleTicketModal (bool){
-    return {
-        type: types.TOGGLE_TICKET_MODAL,
-        payload: bool
-    };
+export function toggleTicketModal(bool) {
+  return {
+    type: types.TOGGLE_TICKET_MODAL,
+    payload: bool,
+  };
 }
