@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { loadFetchUser } from "../actions/user";
 import { loadFetchApps } from "../actions/apps";
 import { loadFetchComments } from "../actions/comments";
-import { loadFetchTickets } from "../actions/tickets";
+import { loadFetchTickets } from "../components/tickets/ticketsActions";
 import NewBugForm from "./NewBugForm";
-import TicketHistoryDisplay from "./TicketHistoryDisplay";
-import TicketDiscussionModal from "./TicketDiscussionModal";
+import TicketHistoryDisplay from "../components/tickets/TicketHistoryDisplay";
+import TicketDiscussionModal from "../components/tickets/TicketDiscussionModal";
 import Footer from "./Footer";
 
 import "bootstrap/less/bootstrap.less";

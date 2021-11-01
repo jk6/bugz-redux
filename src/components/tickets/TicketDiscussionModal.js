@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import cuid from "cuid";
 import fecha from "fecha";
-import { toggleTicketModal } from "../actions/modals";
+import { toggleTicketModal } from "../../actions/modals";
 import {
   toggleTicketStatus,
   toggleSelectedTicketStatus,
-} from "../actions/tickets";
-import { createComment } from "../actions/comments";
+} from "./ticketsActions";
+import { createComment } from "../../actions/comments";
 import Modal from "react-bootstrap/lib/Modal";
 import TicketInfo from "./TicketInfo";
-import NewReplyForm from "./NewReplyForm";
+import NewReplyForm from "../NewReplyForm";
 import TicketDiscussion from "./TicketDiscussion";
 
 class TicketDiscussionModal extends Component {

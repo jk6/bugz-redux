@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { createTicket } from "../actions/tickets";
+import { createTicket } from "./tickets/ticketsActions";
 import { selectApp } from "../actions/apps";
 import fecha from "fecha";
 import cuid from "cuid";

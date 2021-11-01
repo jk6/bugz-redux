@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { toggleTicketModal } from "../actions/modals";
-import { selectTicket } from "../actions/tickets";
+import { toggleTicketModal } from "../../actions/modals";
+import { selectTicket } from "../tickets/ticketsActions";
 import TicketEntry from "./TicketEntry";
 
 class TicketHistoryDisplay extends Component {
